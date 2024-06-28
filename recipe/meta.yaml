@@ -1,5 +1,5 @@
 {% set name = "symfc" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
-  sha256: 079296b8e8339154f8e5405bf164841cb195a1a67085edca18372fc34d3ba207
+  sha256: b5fc1a33f9e00211490fc00c0e44bff6072261eb78002d59a8e43dfa114b3ad7
 
 build:
   noarch: python
