@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy
     - scipy >=1.11.3
     - spglib
@@ -34,6 +34,7 @@ test:
     - pip check
     - pytest
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
 
