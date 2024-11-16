@@ -1,13 +1,14 @@
 {% set name = "symfc" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
-  sha256: 4e13c3dc77be36ed31390904bbeb86dbf5e2c100641ff919b10c47dc788a0cf4
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
+  sha256: c20818f89225ad3a36e7f4d08a0f6c8a97452c6e00afd4839e9d444e310cb744
 
 build:
   noarch: python
@@ -16,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
-    - scipy
+    - scipy >=1.11.3
     - spglib
 
 test:
@@ -34,6 +35,7 @@ test:
     - pip check
     - pytest
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
 
