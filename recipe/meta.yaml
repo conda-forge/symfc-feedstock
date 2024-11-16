@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.9
     - numpy
-    - scipy >= 1.11.3
+    - scipy >=1.11.3
     - spglib
 
 test:
