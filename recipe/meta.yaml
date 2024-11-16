@@ -1,5 +1,5 @@
 {% set name = "symfc" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
-  sha256: 4e13c3dc77be36ed31390904bbeb86dbf5e2c100641ff919b10c47dc788a0cf4
+  sha256: c20818f89225ad3a36e7f4d08a0f6c8a97452c6e00afd4839e9d444e310cb744
 
 build:
   noarch: python
@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - numpy
-    - scipy
+    - scipy >= 1.11.3
     - spglib
 
 test:
