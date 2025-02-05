@@ -1,5 +1,5 @@
 {% set name = "symfc" %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
-  sha256: 6df6a43e45533211a2cab9d8c23320f35a06e37c535ad40cb64d778a1a1735ee
+  sha256: 6cbbf5fb041ed34dea5b5c04b201aa0fd89880d4ebaee616398bb3a6a37476e0
 
 build:
   noarch: python
