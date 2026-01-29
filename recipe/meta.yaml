@@ -1,6 +1,6 @@
 {% set name = "symfc" %}
-{% set version = "1.6.0" %}
-{% set python_min = "3.9" %}
+{% set version = "1.6.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
-  sha256: 973645d648561542ac04e65bc337466529095a6602eee088566ee4347eaccbb9
+  sha256: c9a5e727aea35701585c40ec9bbfb06b3e7a1ca2ee6e2fa5a1fe6dfd0c9a805a
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - scipy >=1.11.3
+    - scipy >=1.11.3,!=1.17.0
     - spglib
 
 test:
