@@ -1,5 +1,5 @@
 {% set name = "symfc" %}
-{% set version = "1.7.2" %}
+{% set version = "1.7.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/symfc-{{ version }}.tar.gz
-  sha256: 2ef8ed0372b45be3562e1ec516332bf1ef3526556f6cbae7049064301b9e12b1
+  sha256: b0072d16439e424186c698fd28eed05f962f8716b6d5daeafb0ee14f06571f51
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
